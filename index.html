@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,300i,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Портфолио Наталья Алексеенко</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://yandex.st/jquery/1.9.1/jquery.js"></script>
+    <script>
+        function send_form() {
+            var msg = $("#forma").serialize();
+            $.ajax({
+                type: "POST",
+                url: "/send_form.php",
+                data: msg,
+                success: function(data) {
+                    alert("Сообщение отправлено");
+                    setTimeout(function() {
+                        $(".feedback_form_bg").fadeOut();
+                    }, 1000);
+                },
+                error: function(xhr, str) {
+                    alert("Возникла ошибка!");
+                    setTimeout(function() {
+                        $(".feedback_form_bg").fadeOut();
+                    }, 1000);
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+
+                <div class="user">
+                    <div class="user__avatar">
+                        <img src="https://placehold.it/57/333" alt="">
+                    </div>
+                    <div class="user__content">
+                        <div class="user__name">
+                            Наталья<br>Алексеенко
+                        </div>
+                        <div class="user__prof">Дизайнер интерьера</div>
+                    </div>
+                </div>
+
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#">мои работы</a>
+                    <a class="nav__link" href="#">обо мне</a>
+
+                    <a class="nav__link  nav__link--btn" href="#" data-modal="#modal_hire_me">Обратная связь</a>
+                </nav>
+
+                <button class="burger" type="button" id="navToggle">
+                    <img class="burger__icon" src="images/burger.svg" alt="">
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+
+            <div class="intro__inner">
+                <div class="intro__content">
+                    <h2 class="intro__subtitle">Привет! Я</h2>
+                    <h1 class="intro__title">Наталья Алексеенко</h1>
+                    <div class="intro__text">Дизайнер интерьера</div>
+
+                    <img class="intro__photo-sm" src="images/main-foto.png" alt="">
+
+                    <div class="social">
+
+
+                        <a class="social__link" target="_blank" href="https://vk.com/alexeenko_natalia">
+                            <img src="images/vk.png" alt="">
+                        </a>
+                        <a class="social__link" target="_blank" href="http://instagram.com/natalia_alexeenko_design">
+                            <img src="images/instagram.png" alt="">
+                        </a>
+                        <a class="social__link" target="_blank" href="https://www.facebook.com/profile.php?id=100023248905795">
+                            <img src="images/facebook.png" alt="">
+                        </a>
+                    </div>
+
+                    <a class="btn" href="#" data-modal="#modal_hire_me">связаться со мной</a>
+                    <button class="btn" type="button" data-modal="#modal_resume">моё резюме</button>
+                </div>
+
+                <img class="intro__photo" src="images/main-foto.png" alt="">
+            </div><!-- /.intro__inner -->
+
+        </div><!-- /.container -->
+    </section>
+
+
+
+    <!-- Works -->
+    <div class="works">
+        <div class="container">
+
+            <div class="works__nav">
+                <a class="works__nav-link" href="#" data-filter="all">Все работы</a>
+                <a class="works__nav-link" href="#" data-filter="2020">2020</a>
+                <a class="works__nav-link" href="#" data-filter="2019">2019</a>
+                <a class="works__nav-link" href="#" data-filter="2018">2018</a>
+            </div>
+
+            <!-- 2020 -->
+            <div class="portfolio" id="portfolio">
+                <div class="portfolio__col" data-cat="2020">
+                    <div class="work" data-modal="#modal_project_1">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2020</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2020">
+                    <div class="work" data-modal="#modal_project_2">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2020</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2020">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2020</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2020">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2020</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2020">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2020</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2020">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2020</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2020">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2020</div>
+                            <div class="work__title">
+                                Описание проекта
+                                <!--                                <time class="work__date" datetime="2019-11-22 19:00">2019</time>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.2020 -->
+
+
+                <!-- 2019 -->
+                <div class="portfolio__col" data-cat="2019">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2019</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2019">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2019</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2019">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2019</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2019">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2019</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2019">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2019</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2019">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2019</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2019">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2019</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.2019 -->
+
+
+                <!-- 2018 -->
+                <div class="portfolio__col" data-cat="2018">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2018</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2018">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2018</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2018">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2018</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2018">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2018</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2018">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2018</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2018">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2018</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio__col" data-cat="2018">
+                    <div class="work">
+                        <img class="work__image" src="https://placehold.it/370x300" alt="">
+                        <div class="work__content">
+                            <div class="work__cat">категория: 2018</div>
+                            <div class="work__title">
+                                Описание проекта
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.2018 -->
+
+            </div><!-- /.portfolio -->
+
+
+
+        </div><!-- /.container -->
+    </div><!-- /.works -->
+
+
+
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+
+            <div class="about__inner">
+                <div class="about__photo">
+                    <img class="img" src="images/about-foto.png" alt="">
+                </div>
+
+                <div class="about__content">
+                    <h3 class="about__title">Обо мне</h3>
+                    <h2 class="about__bigtitle">кто я?!</h2>
+                    <div class="about__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste a dolores consectetur provident ratione quo reiciendis, eligendi aliquid error ab ducimus fugit, quia perferendis id laboriosam animi eos excepturi sint.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste a dolores consectetur provident ratione quo reiciendis, eligendi aliquid error ab ducimus fugit, quia perferendis id laboriosam animi eos excepturi sint.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste a dolores consectetur provident ratione quo reiciendis, eligendi aliquid error ab ducimus fugit, quia perferendis id laboriosam animi eos excepturi sint.</p>
+                    </div>
+                    <a class="btn" href="#" data-modal="#modal_hire_me">обратная свзяь</a>
+                    <button class="btn" type="button" data-modal="#modal_resume">моё резюме</button>
+                </div><!-- /.about__content -->
+            </div><!-- /.about__inner -->
+
+        </div><!-- /.container -->
+    </section>
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer__inner">
+                <div class="footer__credits">
+                    <div class="footer__copyright">
+                        &copy; 2020 Alexeenko Natalia
+                    </div>
+
+                    <div class="footer__social">
+
+                        <a target="_blank" href="https://vk.com/alexeenko_natalia">
+                            <img src="images/vk.png" height="18" alt="">
+                        </a>
+                        <a target="_blank" href="http://instagram.com/natalia_alexeenko_design">
+                            <img src="images/instagram.png" width="18" alt="">
+                        </a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100023248905795">
+                            <img src="images/facebook.png" width="20" alt="">
+                        </a>
+                    </div>
+                </div><!-- /.footer__credits -->
+
+
+            </div><!-- /.footer__inner -->
+
+        </div><!-- /.container -->
+    </footer>
+
+
+
+
+
+    <!-- Modals -->
+    <div class="modal" id="modal_project_1">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/close-btn.png" style="width: 40px" alt="Close">
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="https://placehold.it/790x780" alt="">
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="https://placehold.it/790x780/333" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Описание проекта</h3>
+                        <div class="modal-work__info">
+                            Категория <span class="modal-work__info-divider">|</span> 2018
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__client-title">Заказчик:</div>
+                        <div class="modal-work__client-company">Creative Agency</div>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/back.svg" height="11" alt="">
+                            Назад
+                        </button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Вперед
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+            </div>
+            <!--/.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal" id="modal_project_2">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/modal-close.svg" alt="Close">
+            </button>
+
+            <div class="modal-work">
+                <div class="modal-work__preview">
+                    <div data-slider="slick">
+                        <div>
+                            <img class="modal-work__photo" src="https://placehold.it/790x780" alt="">
+                        </div>
+                        <div>
+                            <img class="modal-work__photo" src="https://placehold.it/790x780/333" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-work__content">
+
+                    <div class="modal-work__header">
+                        <h3 class="modal-work__title">Описание проекта 2</h3>
+                        <div class="modal-work__info">
+                            category <span class="modal-work__info-divider">|</span> 2018
+                        </div>
+                    </div>
+
+                    <div class="modal-work__client">
+                        <div class="modal-work__client-title">Заказчик:</div>
+                        <div class="modal-work__client-company">Creative Agency</div>
+                    </div>
+
+                    <div class="modal-work__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur dicta, recusandae debitis iusto quos voluptatum at. Dolorum a, velit rerum dicta aut sapiente, optio accusantium? Sunt sed praesentium est minima.</p>
+                    </div>
+
+                    <div class="modal-work__footer">
+                        <button class="modal-work__btn slickPrev" type="button">
+                            <img src="images/back.svg" height="11" alt="">
+                            Previous
+                        </button>
+                        <button class="modal-work__btn slickNext" type="button">
+                            Next
+                            <img src="images/next.svg" height="11" alt="">
+                        </button>
+                    </div>
+
+                </div><!-- /.modal-work__content -->
+            </div>
+            <!--/.modal-work -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal" id="modal_resume">
+        <div class="modal__dialog">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/close-btn.png" style="width: 40px" alt="Close">
+            </button>
+
+            <div class="modal__content">
+                <h3 class="modal__title  text-center">РЕЗЮМЕ</h3>
+
+                <!--
+                <div class="text-center">
+                    <a class="btn btn--thin" href="#">скачать PDF</a>
+                    <a class="btn btn--thin" href="javascript:(print());">Распечатать</a>
+                </div>
+-->
+
+                <div class="timeline">
+                    <div class="timeline__col  timeline__col--left">
+                        <h4 class="timeline__title">опыт работы</h4>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="11-21-2019">2012 - 2013</time>
+                            <h5 class="timeline__subtitle">Мебельный салон "Анна Потапова"</h5>
+                            <div class="timeline__position">Администратор</div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="11-21-2019">2013 - 2014</time>
+                            <h5 class="timeline__subtitle">Мебельный салон "Raum Plus"</h5>
+                            <div class="timeline__position">Дизайнер мебели / Менеджер по прадажам</div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="11-21-2019">2014 - 2015</time>
+                            <h5 class="timeline__subtitle">Мебельный салон "МебельГрад"</h5>
+                            <div class="timeline__position">Дизайнер мебели / Менеджер по прадажам</div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="11-21-2019">2015 - 2019</time>
+                            <h5 class="timeline__subtitle">Фрилансер</h5>
+                            <div class="timeline__position">Дизайнер интерьеров / Дизайнер мебели </div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="11-21-2019">2019 - <b>Present</b></time>
+                            <h5 class="timeline__subtitle">Дизайн студия "Натальи Алексеенко"</h5>
+                            <div class="timeline__position">Ведущий дизайнер </div>
+                            <div class="timeline__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis debitis autem aspernatur sed iusto maiores nihil magni provident dolore, animi nemo est corporis in facilis eum quae sint aliquam, ipsam?</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="timeline__col  timeline__col--right">
+                        <h4 class="timeline__title">образование</h4>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="11-21-2019">2006 - 2011</time>
+                            <h5 class="timeline__subtitle">Инженер сварочного производства</h5>
+                            <div class="timeline__position">ДГТУ, Высшее образование</div>
+                        </div>
+
+                        <div class="timeline__item">
+                            <time class="timeline__date" datetime="11-21-2019">2011 - 2014</time>
+                            <h5 class="timeline__subtitle">Дизайнер Интерьеров</h5>
+                            <div class="timeline__position">ЮФУ, Высшее образование</div>
+                        </div>
+
+                        <h4 class="timeline__title">навыки</h4>
+
+                        <div class="progress-bar">
+
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">3Ds Max</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Photoshop</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">ArchiCAD</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">AutoCAD</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">KitchenDraw</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Pro100</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 80%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.progress-bar -->
+
+
+
+                        <h4 class="timeline__title">Личные качества</h4>
+
+                        <div class="progress-bar">
+
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Комуникабельность</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Стрессоустойчивость</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 95%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Честность</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 99%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Надежность</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 99%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Адаптация к переменам</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 90%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="progress-bar__item">
+                                <div class="progress-bar__left">
+                                    <div class="progress-bar__title">Скорость работы</div>
+                                </div>
+                                <div class="progress-bar__right">
+                                    <div class="progress-bar__bar">
+                                        <div class="progress-bar__progress" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.progress-bar -->
+
+
+
+
+                    </div><!-- /.timeline__col -->
+
+                </div><!-- /.timeline -->
+
+                <div class="text-center">
+                    <a class="btn" href="#" data-modal="#modal_hire_me">Обратная связь</a>
+                </div>
+
+            </div><!-- /.modal__content -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+    <div class="modal" id="modal_hire_me">
+        <div class="modal__dialog  modal__dialog--sm">
+
+            <button class="modal__close" type="button" data-close>
+                <img src="images/close-btn.png" style="width: 40px" alt="Close">
+            </button>
+
+            <div class="contact">
+                <div class="contact__left">
+                    <h3 class="modal__title mb-0">контакты</h3>
+                    <h4 class="modal__subtitle">Звоните и задавайте вопросы!</h4>
+
+                    <ul class="contact__info">
+                        <li class="contact__info-item">
+
+                            <img class="contact__info-icon" src="images/phones.jpg" style="width: 14px" alt="">
+                            <a href="tel:+7 (989) 991-28-60">+7 (989) 991-28-60</a>
+                        </li>
+                        <li class="contact__info-item">
+                            <img class="contact__info-icon" src="images/email-icon-thumb.jpg" style="width: 14px" alt="Почта">
+                            <a href="mailto:natalidesign15@yandex.ru?subject=Обратная связь с Наталья Алексеенко">natalidesign15@yandex.ru</a>
+
+
+                        </li>
+
+                        <li class="contact__info-item">Я в соц. сетях:
+                            &nbsp;&nbsp;
+                            <a href="http://instagram.com/natalia_alexeenko_design" target="_blank">Instagram</a>
+                            &nbsp;&nbsp;
+                            <a href="https://vk.com/alexeenko_natalia" target="_blank">VK</a>
+                            &nbsp;&nbsp;
+                            <a href="https://www.facebook.com/profile.php?id=100023248905795" target="_blank">FaceBook</a>
+                        </li>
+
+                    </ul>
+
+
+                    <form class="form" action="/send_form.php" method="post">
+                        <div class="form__group">
+                            <label class="form__label" for="input-email">Электронная почта</label>
+                            <input class="form__input" name="input-email" type="text" id="input-email" placeholder="Введите email">
+                        </div>
+
+                        <div class="form__group">
+                            <label class="form__label" for="input-text">Задать вопрос:</label>
+                            <textarea class="form__textarea" name="input-text" id="input-text" placeholder="Напишите ваш вопрос здесь..."></textarea>
+                        </div>
+
+                        <div class="text-right">
+                            <button class="btn" type="submit">отправить</button>
+                        </div>
+                    </form>
+
+
+
+
+
+                </div><!-- /.contact__left -->
+            </div><!-- /.contact -->
+
+        </div><!-- /.modal__dialog -->
+    </div><!-- /.modal -->
+
+
+
+    <!-- JS -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body></html>
