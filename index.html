@@ -33,8 +33,8 @@
                 </div>
 
                 <nav class="nav" id="nav">
-                    <a class="nav__link" href="#">мои работы</a>
-                    <a class="nav__link" href="#">обо мне</a>
+                    <a class="nav__link" href="#myworks">мои работы</a>
+                    <a class="nav__link" href="#aboutme">обо мне</a>
 
                     <a class="nav__link  nav__link--btn" href="#" data-modal="#modal_hire_me">Обратная связь</a>
                 </nav>
@@ -122,7 +122,7 @@
                         </div>
                     </div>
                 </div>
-
+                <a name="myworks"></a>
                 <div class="portfolio__col" data-cat="2020">
                     <div class="work">
                         <img class="work__image" src="https://placehold.it/370x300" alt="">
@@ -376,9 +376,9 @@
                 <div class="about__photo">
                     <img class="img" src="images/about-foto.png" alt="">
                 </div>
-
+                <a name="aboutme"></a>
                 <div class="about__content">
-                    <h3 class="about__title">Обо мне</h3>
+                    <h3 class="about__title" name="aboutme">Обо мне</h3>
                     <h2 class="about__bigtitle">кто я?!</h2>
                     <div class="about__text">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste a dolores consectetur provident ratione quo reiciendis, eligendi aliquid error ab ducimus fugit, quia perferendis id laboriosam animi eos excepturi sint.</p>
@@ -787,7 +787,7 @@
         <div class="modal__dialog  modal__dialog--sm">
 
             <button class="modal__close" type="button" data-close>
-                <img src="images/close-btn.png" style="width: 40px" alt="Close">
+                <img class="modal__close-img" src="images/close-btn.png" alt="Close">
             </button>
 
             <div class="contact">
@@ -808,12 +808,12 @@
 
                         </li>
 
-                        <li class="contact__info-item">Я в соц. сетях:
-                            &nbsp;&nbsp;
+                        <li class="contact__info-item">
+
                             <a href="http://instagram.com/natalia_alexeenko_design" target="_blank">Instagram</a>
-                            &nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="https://vk.com/alexeenko_natalia" target="_blank">VK</a>
-                            &nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
                             <a href="https://www.facebook.com/profile.php?id=100023248905795" target="_blank">FaceBook</a>
                         </li>
 
@@ -852,6 +852,4 @@
     <script src="js/slick.min.js"></script>
     <script src="js/app.js"></script>
 
-</body>
-
-</html>
+</body></html>
