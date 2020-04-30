@@ -2,12 +2,22 @@
 
 .contact {
     display: flex;
-    background:  url(https://placehold.it/477x700) right center no-repeat;
+    background: url(https://placehold.it/477x700) right center no-repeat;
 }
 
 .contact__left {
     width: 47%;
     padding: 2rem;
+
+    @media @tablet {}
+
+    @media @mobile {}
+
+    @media @mobile-sm {
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+    }
 }
 
 .contact__info {
