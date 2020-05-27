@@ -94,12 +94,33 @@ $(function () {
     =====================*/
 
     worksSlider.slick({
+        mobileFirst: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
         arrows: false,
-        dots: true
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+    },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+    }
+  ]
     });
 
     $(".slickPrev").on("click", function (event) {
